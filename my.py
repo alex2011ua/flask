@@ -10,7 +10,15 @@ def hello_world():
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
-    return render_template('hello.html', time=time.asctime())
+    return render_template('hello.html', time=time.asctime(), name = name)
+
+@app.route("/fsum/")
+def fsum():
+
+    a = 10
+    b = 5
+
+    return ''
 
 if __name__ == '__main__':
     app.run()
